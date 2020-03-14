@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://kit.fontawesome.com/9b74a98d1b.js" crossorigin="anonymous"></script>
+
+    {% block styles %}
+    <link rel="stylesheet" href="static/CSS/base_CSS/b_main.css">
+    {% endblock styles %}
+
+    <title>{{ title }}</title>
+</head>
+<body>
+
+{% block main %}
+
+<div class="hello_box">
+
+    <i class="fas fa-smile"></i>
+
+    <h1 class="hello_text">
+        Hello World
+    </h1>
+
+</div>
+
+{% endblock main %}
+
+</body>
+</html>

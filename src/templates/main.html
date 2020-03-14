@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/9b74a98d1b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="static/CSS/main.css">
+
+    {% block styles %}
+
+    {% endblock styles %}
+
+    <title>{{ title }}</title>
+
+
+</head>
+<body>
+
+<header>
+
+    <menu>
+        <li><a class="home_link" href="{{ url_for('index_page') }}"><span><i class="fas fa-home"></i></span></a></li>
+        <li>
+            <ul>
+                <li><a class="top_menu_link" href="#">Empty</a></li>
+                <li>
+                    <form action="###" method="GET" class="search_form">
+                        <label for="search_input" class="search_label">
+                            <input type="text" id="search_input">
+                        </label>
+                        <button class="search_btn" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </li>
+        <li><a class="sig_in_link" href="{{ url_for('sign_in') }}"><span>sign in </span><i class="fas fa-user"></i></a></li>
+    </menu>
+
+</header>
+
+<main>
+    {% block main %}
+
+    {% endblock main %}
+</main>
+
+<footer></footer>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+palet {
+    color: #1b262c;
+    color: #ffa372;
+    color: #ed6663;
+    color: #0f4c81;
+}
+
+body {
+    background-color: #1b262c;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Sen', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+menu {
+    width: 100%;
+    max-width: 1920px;
+    height: 100px;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #ffa372;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    list-style: none;
+}
+
+menu ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+menu ul li {
+    margin: 0 15px;
+}
+
+.top_menu_link {
+    text-transform: uppercase;
+    color: #ffa372;
+    font-weight: bold;
+    letter-spacing: .9px;
+
+    min-width: 70px;
+    min-height: 30px;
+
+    padding: 10px 20px;
+
+    background-color: #0f4c81;
+
+    border-radius: 30px;
+}
+
+.home_link {
+    margin: 0 30px;
+    padding: 10px;
+
+    min-width: 30px;
+    min-height: 30px;
+
+    font-size: 30px;
+    color: #ffa372;
+
+    background-color: #0f4c81;
+
+    border-radius: 50%;
+}
+
+
+.sig_in_link {
+    margin: 0 30px;
+    padding: 10px 20px;
+
+    min-width: 70px;
+    min-height: 30px;
+
+    text-transform: uppercase;
+    color: #ffa372;
+    font-weight: bold;
+    letter-spacing: .9px;
+
+    background-color: #0f4c81;
+
+    border-radius: 40px;
+}
+
+.search_form {
+    position: relative;
+}
+
+#search_input {
+    height: 25px;
+    width: 200px;
+
+    padding: 3px;
+
+    font-size: 19px;
+    color: #ffa372;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+
+   background-color: #1b262c;
+
+    border: 5px solid #0f4c81;
+    border-radius: 5px;
+
+    z-index: 2;
+}
+
+.search_btn {
+    position: absolute;
+    top: calc(50% + 2px);
+    right: 5px;
+    transform: translate(0, -50%);
+
+    background-color: #1b262c;
+    border: none;
+
+    color: #ffa372;
+    font-size: 21px;
+
+    z-index: 1;
+}

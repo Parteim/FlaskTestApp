@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="static/CSS/sign_in.css">
+    {% endblock styles %}
+
+{% block main %}
+
+    <form action="###" class="sign_in_form">
+
+        <i class="fas fa-sign-in-alt"></i>
+
+        <label for="sign_in_login">
+            <input type="text" id="sign_in_login" placeholder="Login">
+        </label>
+        <label for="sign_in_password">
+            <input type="password" id="sign_in_password" placeholder="Password">
+        </label>
+        
+        <button type="submit" class="sign_in_btn">OK</button>
+        
+    </form>
+
+{% endblock main %}

@@ -1,0 +1,11 @@
+.message_post {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    font-weight: bold;
+    font-size: 70px;
+
+    background-color: #0f4c81;
+    color: #ffa372;
+}
