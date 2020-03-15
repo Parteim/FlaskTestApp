@@ -10,7 +10,7 @@
 
 {% for item in posts%}
 
-    <li><h2 class="message_post">{{ item.title }}</h2></li>
+    <li><a href="{{ url_for('posts.post_detail', slug=item.slug) }}"><h2 class="message_post">{{ item.title }}</h2></a></li>
 
 {% endfor %}
 

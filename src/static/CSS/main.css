@@ -68,20 +68,22 @@ menu ul li {
 }
 
 .home_link {
+    display: block;
+
     margin: 0 30px;
     padding: 10px;
 
-    min-width: 30px;
-    min-height: 30px;
+    min-width: 35px;
+    min-height: 35px;
+
+    background-color: #1b262c;
 
     font-size: 30px;
     color: #ffa372;
 
-    background-color: #0f4c81;
-
+    border: 4px solid #0f4c81;
     border-radius: 50%;
 }
-
 
 .sig_in_link {
     margin: 0 30px;
@@ -108,17 +110,19 @@ menu ul li {
     height: 25px;
     width: 200px;
 
-    padding: 3px;
+    padding: 3px 8px;
 
     font-size: 19px;
-    color: #ffa372;
+    color: #ed6663;
     font-weight: bold;
     letter-spacing: 0.8px;
 
    background-color: #1b262c;
 
     border: 5px solid #0f4c81;
-    border-radius: 5px;
+    border-radius: 40px;
+
+    outline: none;
 
     z-index: 2;
 }
@@ -126,14 +130,60 @@ menu ul li {
 .search_btn {
     position: absolute;
     top: calc(50% + 2px);
-    right: 5px;
+    right: 7px;
     transform: translate(0, -50%);
 
     background-color: #1b262c;
     border: none;
+    border-radius: 40px;
 
     color: #ffa372;
     font-size: 21px;
 
     z-index: 1;
+}
+
+
+
+
+
+
+
+.home_message_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #ffa372;
+
+    border-radius: 6px;
+}
+
+.home_message {
+    margin: 15px;
+    padding: 10px;
+
+    font-size: 70px;
+    font-weight: 700;
+    color: #ed6663;
+    text-align: center;
+
+    background-color: #0f4c81;
+    border-radius: 6px;
+
+    user-select: none;
+}
+
+.fa-smile {
+    font-size: 80px;
+    color: #1b262c;
 }

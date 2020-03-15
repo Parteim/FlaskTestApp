@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/post.css') }}">
+{% endblock styles %}
+
+{% block main %}
+
+<div class="post_box">
+    <h1 class="title_post"> {{ post.title }} </h1>
+    <p class="body_post"> {{ post.body }} </p>
+</div>
+
+{% endblock main %}

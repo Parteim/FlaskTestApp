@@ -30,23 +30,27 @@
     width: 250px;
 
     margin: 5px;
-    padding: 4px;
+    padding: 5px 10px;
 
     background: #1b262c;
 
     border: 5px solid #0f4c81;
-    border-radius: 5px;
+    border-radius: 40px;
 
-    color: #ffa372;
+    color: #ed6663;
     font-size: 34px;
     font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+
+    outline: none;
 }
 
 .sign_in_btn {
     margin-top: 5px;
 
-    height: 40px;
-    width: 80px;
+    height: 45px;
+    width: 90px;
 
     background-color: #0f4c81;
     border: none;
@@ -54,6 +58,7 @@
     color: #ffa372;
     font-size: 34px;
     font-weight: bold;
+    text-align: center;
 
-    border-radius: 5px;
+    border-radius: 40px;
 }
