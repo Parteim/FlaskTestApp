@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 
     {% block styles %}
-        <link rel="stylesheet" href="static/CSS/sign_in.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/sign_in.css') }}">
     {% endblock styles %}
 
 {% block main %}

@@ -1,7 +1,19 @@
 {% extends 'main.html' %}
 
+    {% block styles %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/post.css') }}">
+    {% endblock styles %}
+
 {% block main %}
 
-<h1 class="message_post"></h1>
+<ul class="posts_list">
+
+{% for item in posts%}
+
+    <li><h2 class="message_post">{{ item.title }}</h2></li>
+
+{% endfor %}
+
+</ul>
 
 {% endblock main %}

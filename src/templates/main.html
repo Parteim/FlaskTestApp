@@ -6,7 +6,7 @@
 
     <script src="https://kit.fontawesome.com/9b74a98d1b.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="static/CSS/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
 
     {% block styles %}
 
@@ -24,7 +24,7 @@
         <li><a class="home_link" href="{{ url_for('index_page') }}"><span><i class="fas fa-home"></i></span></a></li>
         <li>
             <ul>
-                <li><a class="top_menu_link" href="#">Empty</a></li>
+                <li><a class="top_menu_link" href="{{ url_for('posts.posts_page') }}">Blog</a></li>
                 <li>
                     <form action="###" method="GET" class="search_form">
                         <label for="search_input" class="search_label">
