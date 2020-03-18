@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/post.css') }}">
+{% endblock styles %}
+
+{% block main %}
+
+<div class="create_post_box">
+    <form action="{{ url_for( 'posts.create_post' ) }}" method="POST" class="create_form">
+        {% for field in form %}
+        {{ field.label(class='create_post_label') }}
+        {{ field(class='create_post_field') }}
+        {% endfor %}
+<!--        <label for="title_create_post"></label>-->
+<!--        <label for="body_create_post"></label>-->
+<!--        <input id="title_create_post" type="text" name="title">-->
+<!--        <input id="body_create_post" type="text" name="body">-->
+    </form>
+</div>
+
+{% endblock main %}

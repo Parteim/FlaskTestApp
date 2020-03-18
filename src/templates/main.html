@@ -27,9 +27,9 @@
             <ul>
                 <li><a class="top_menu_link" href="{{ url_for('posts.posts_page') }}">Blog</a></li>
                 <li>
-                    <form action="###" method="GET" class="search_form">
+                    <form action="{{ url_for( 'posts.posts_page' ) }}" method="GET" class="search_form">
                         <label for="search_input" class="search_label">
-                            <input type="text" id="search_input">
+                            <input name="search" value="{{ request.args.get('search', '') }}" type="text" id="search_input">
                         </label>
                         <button class="search_btn" type="submit"><i class="fas fa-search"></i></button>
                     </form>

@@ -6,9 +6,19 @@
 
 {% block main %}
 
+<div class="tag_box">
+
+    <a href="{{ url_for( 'posts.create_post' ) }}" class="create_post_link">Create post</a>
+
+{% if tag %}
+
+<h1 class="title_post"> {{ tag.name }} </h1>
+
+{% endif %}
+
 <ul class="posts_list">
 
-{% for item in posts%}
+{% for item in posts %}
 
     <li><a href="{{ url_for('posts.post_detail', slug=item.slug) }}"><h2 class="message_post">{{ item.title }}</h2></a></li>
 
@@ -16,4 +26,6 @@
 
 </ul>
 
+
+</div>
 {% endblock main %}

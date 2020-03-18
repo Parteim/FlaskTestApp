@@ -1,11 +1,29 @@
 .message_post {
+    position: relative;
+
     margin: 10px 0;
+    padding: 5px 10px;
+
+    width: 90%;
 
     font-weight: bold;
     font-size: 50px;
 
+    color: #ed6663;
+}
+
+.message_post::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -3px;
+
+    width: 100%;
+    height: 3px;
+
     background-color: #0f4c81;
-    color: #ffa372;
 }
 
 .posts_list {
@@ -17,19 +35,142 @@
 
 .post_box {
     padding: 50px;
+    margin: 0 auto;
 
+    width: 90%;
+    height: 100%;
+    max-width: 1920px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    /* background-color: #0f4c81; */
+}
+
+.title_post {
+    color: #ed6663;
+    font-size: 55px;
+    letter-spacing: 1.1px;
+}
+
+.body_post {
+    color: #ffa372;
+    font-size: 23px;
+}
+
+.tag_list {
+    list-style: none;
+}
+
+.tag_link {
+    display: block;
+    
+    max-width: 120px;
+    min-width: 50px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1b262c;
+
+    background-color: #ed6663;
+
+    border-radius: 40px;
+
+}
+
+.tag_box {
+    position: relative;
+
+    padding: 50px;
+    margin: 0 auto;
+
+    width: 90%;
+    height: 100%;
+    max-width: 1920px;
+}
+
+.create_post_link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 200px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ed6663;
+
+    color: #1b262c;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    font-size: 21px;
+    text-transform: uppercase;
+
+    border-radius: 40px;
+}
+
+.create_post_box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    padding: 50px;
+
+    width: 35%;
+
     background-color: #0f4c81;
+
+    border-radius: 5px;
+
+    font-size: 31px;
+    font-weight: bold;
+    color: #ffa372;
+
+    z-index: 10;
 }
 
-.title_post {
-    color: #ffa372;
+.create_form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    letter-spacing: 1.3px;
 }
 
-.body_post {
-    color: #ffa372;
+.fa-plus {
+    font-size: 80px;
+    color: #ed6663;
+}
+
+.create_post_label {
+    margin: 20px;
+}
+
+.create_post_field {
+    width: 80%;
+    min-height: 50px;
+
+    color: #ed6663;
+    font-weight: bold;
+    font-size: 29px;
+
+    border: 5px solid #ffa372;
+    border-radius: 5px;
+
+    background-color: #1b262c;
+
+    resize: none;
+}
+
+.create_post_field:nth-child(4) {
+    height: 170px;
 }

@@ -22,15 +22,17 @@ button {
     cursor: pointer;
 }
 
+header {
+    background-color: #ffa372;
+}
+
 menu {
     width: 100%;
-    max-width: 1920px;
+    max-width: 2000px;
     height: 100px;
 
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-
-    background-color: #ffa372;
 
     display: flex;
     align-items: center;
