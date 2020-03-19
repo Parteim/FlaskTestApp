@@ -117,11 +117,12 @@
 }
 
 .create_post_box {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 
+    margin: 50px auto;
     padding: 50px;
 
     width: 35%;
@@ -159,18 +160,37 @@
     width: 80%;
     min-height: 50px;
 
+    padding: 0 10px;
+
     color: #ed6663;
     font-weight: bold;
     font-size: 29px;
 
     border: 5px solid #ffa372;
-    border-radius: 5px;
+    border-radius: 40px;
 
     background-color: #1b262c;
+
+    outline: none;
 
     resize: none;
 }
 
 .create_post_field:nth-child(4) {
     height: 170px;
+    padding: 10px;
+}
+
+.create_post_btn {
+    margin-top: 30px;
+    padding: 10px 25px;
+    
+    background-color: #ed6663;
+    
+    color: #1b262c;
+    font-size: 31px;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 40px;
 }
