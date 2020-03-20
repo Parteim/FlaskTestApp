@@ -1,8 +1,8 @@
 {% extends 'main.html' %}
 
-    {% block styles %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/post.css') }}">
-    {% endblock styles %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/post.css') }}">
+{% endblock styles %}
 
 {% block main %}
 
@@ -10,22 +10,36 @@
 
     <a href="{{ url_for( 'posts.create_post' ) }}" class="create_post_link">Create post</a>
 
-{% if tag %}
+    {% if tag %}
 
-<h1 class="title_post"> {{ tag.name }} </h1>
+    <h1 class="title_post"> {{ tag.name }} </h1>
 
-{% endif %}
+    {% endif %}
 
-<ul class="posts_list">
+    <ul class="posts_list">
 
-{% for item in posts %}
+        {% for item in pages.items %}
 
-    <li><a href="{{ url_for('posts.post_detail', slug=item.slug) }}"><h2 class="message_post">{{ item.title }}</h2></a></li>
+        <li><a href="{{ url_for('posts.post_detail', slug=item.slug) }}"><h2 class="message_post">{{ item.title }}</h2>
+        </a></li>
 
-{% endfor %}
+        {% endfor %}
 
-</ul>
+    </ul>
 
+    <div class="pagination_box">
+
+        {% if not pages.has_prev %}
+        <a href="#" class="pagination_btn_disable"><i class="fas fa-angle-left"></i></a>
+        {% else %}
+        <a href="./?page={{ pages.prev_num }}" class="pagination_btn"><i class="fas fa-angle-left"></i></a>
+        {% endif %}
+        {% if not pages.has_next %}
+        <a href="#" class="pagination_btn_disable"><i class="fas fa-angle-right"></i></a>
+        {% else %}
+        <a href="./?page={{ pages.next_num }}" class="pagination_btn"><i class="fas fa-angle-right"></i></a>
+        {% endif %}
+    </div>
 
 </div>
 {% endblock main %}

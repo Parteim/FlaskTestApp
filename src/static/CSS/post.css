@@ -95,7 +95,7 @@
 
 .create_post_link {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 10px;
 
     width: 200px;
@@ -108,7 +108,6 @@
     background-color: #ed6663;
 
     color: #1b262c;
-    font-weight: bold;
     letter-spacing: 1.2px;
     font-size: 21px;
     text-transform: uppercase;
@@ -193,4 +192,72 @@
 
     border: none;
     border-radius: 40px;
+}
+
+
+.pagination_box {
+    position: fixed;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%, 0);
+
+    padding: 15px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #1b262c;
+}
+
+.pagination_btn {
+    width: 40px;
+    height: 40px;
+
+    margin: 15px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ed6663;
+
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #1b262c;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.pagination_btn_disable {
+    width: 40px;
+    height: 40px;
+
+    margin: 15px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ce9594;
+
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #1b262c;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: not-allowed;
 }

@@ -10,14 +10,23 @@ posts = Blueprint('posts', __name__, template_folder='templates')
 def posts_page():
     search_value = request.args.get('search', '')
 
+    page = request.args.get('page')
+
+    if page and page.isdigit():
+        page = int(page)
+    else:
+        page = 1
+
     if search_value:
         posts = Post.query.filter(
             Post.title.contains(search_value) |
             Post.body.contains(search_value)
-        ).all()
+        ).order_by(Post.created.desc()) #.all()
     else:
-        posts = Post.query.order_by(Post.created.desc()).all()
-    return render_template('posts/posts.html', title='Posts', posts=posts)
+        posts = Post.query.order_by(Post.created.desc())
+
+    pages = posts.paginate(page=page, per_page=5)
+    return render_template('posts/posts.html', title='Posts', posts=posts, pages=pages)
 
 
 @posts.route('/<slug>')
@@ -51,8 +60,7 @@ def create_post():
         except:
             print('Something wrong')
 
-            slug = Post.all()[-1].slug
-            print(slug)
+        slug = Post.all()[-1].slug
 
         return redirect(url_for('posts_detail', slug=slug))
     return render_template('posts/create_post.html', title='Create post', form=form)
